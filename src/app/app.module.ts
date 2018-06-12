@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { PagesModule } from './pages/pages.module';
+import { ServiceModule } from './services/service.module';
 
 // Rutas
 import { APP_ROUTES } from './app.routes';
@@ -9,8 +10,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { FormsModule } from '@angular/forms';
-// Servicios
-import { SettingsService } from 'src/app/services/settings.service';
+
 
 
 @NgModule({
@@ -23,10 +23,11 @@ import { SettingsService } from 'src/app/services/settings.service';
     BrowserModule,
     APP_ROUTES,
     PagesModule,
-    FormsModule
+    FormsModule,
+    ServiceModule
   ],
   providers: [
-    SettingsService
+    
   ],
   bootstrap: [AppComponent]
 })

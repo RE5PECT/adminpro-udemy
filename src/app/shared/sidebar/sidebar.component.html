@@ -7,6 +7,8 @@
     <!-- Sidebar navigation-->
     <nav class="sidebar-nav">
       <ul id="sidebarnav">
+
+     
         <li class="user-profile">
           <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false">
             <img src="../assets/images/users/profile.png" alt="user" />
@@ -23,35 +25,29 @@
               <a href="javascript:void()">Inbox</a>
             </li>
             <li>
-              <a href="javascript:void()">Account Setting</a>
+              <a routerLink="/account-settings" routerLinkActive="active">Account Setting</a>
             </li>
             <li>
-              <a href="javascript:void()">Logout</a>
+              <a routerLink="/login">Logout</a>
             </li>
           </ul>
         </li>
         <li class="nav-devider"></li>
         <li class="nav-small-cap">PERSONAL</li>
-        <li>
+       
+          
+        <li *ngFor="let menu of _sidebar.menu">
           <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false">
-            <i class="mdi mdi-gauge"></i>
-            <span class="hide-menu">Dashboard
-              <span class="label label-rouded label-themecolor pull-right">4</span>
+            <i [class]="menu.icono"></i>
+            <span class="hide-menu">{{menu.titulo}}
+              <span class="label label-rouded label-themecolor pull-right">{{menu.submenu.length}}</span>
             </span>
           </a>
           <ul aria-expanded="false" class="collapse">
-            <li>
-              <a href="index.html">Minimal </a>
+            <li *ngFor="let submenu of menu.submenu">
+              <a [routerLink]="[ submenu.url ]" routerLinkActive="active">{{submenu.titulo}}</a>
             </li>
-            <li>
-              <a href="index2.html">Analytical</a>
-            </li>
-            <li>
-              <a href="index3.html">Demographical</a>
-            </li>
-            <li>
-              <a href="index4.html">Modern</a>
-            </li>
+            
           </ul>
       </ul>
     </nav>
