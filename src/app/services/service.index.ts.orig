@@ -1,0 +1,10 @@
+<<<<<<< HEAD
+export { UsuarioService } from './usuario/usuario.service';
+=======
+export { UsuarioService } from 'src/app/services/usuario/usuario.service';
+>>>>>>> 9e53a5cab4147e2455f9ce0d5898061b7c20c80c
+export { SettingsService } from './settings/settings.service';
+export { SharedService } from './shared/shared.service';
+export { SidebarService } from './shared/sidebar.service';
+
+

@@ -1,0 +1,34 @@
+import { Component, OnInit } from '@angular/core';
+<<<<<<< HEAD
+import { UsuarioService } from '../services/service.index';
+=======
+import { UsuarioService } from 'src/app/services/service.index';
+>>>>>>> 9e53a5cab4147e2455f9ce0d5898061b7c20c80c
+
+@Component({
+  selector: 'app-register',
+  templateUrl: './register.component.html',
+  styleUrls: ['./register.component.css']
+})
+export class RegisterComponent implements OnInit {
+
+<<<<<<< HEAD
+  constructor(
+    public _usuarioService: UsuarioService
+  ) {
+    this._usuarioService.getUsuarios().subscribe(
+    (resp)=> console.log(resp),
+    (err) => console.error(err)
+=======
+  constructor(private _usuario: UsuarioService) { 
+
+    this._usuario.getUsuarios().subscribe(
+      (data) => console.log(data)
+>>>>>>> 9e53a5cab4147e2455f9ce0d5898061b7c20c80c
+    );
+  }
+
+  ngOnInit() {
+  }
+
+}
