@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { SettingsService } from 'src/app/services/service.index';
-import { SharedService } from './shared/shared.service';
-import { SidebarService } from './shared/sidebar.service';
+import { SettingsService } from './service.index';
+import { SharedService } from './service.index';
+import { SidebarService } from './service.index';
+import { UsuarioService } from './service.index';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { SidebarService } from './shared/sidebar.service';
   providers:[
     SettingsService,
     SharedService,
-    SidebarService
+    SidebarService,
+    UsuarioService
   ]
 })
 export class ServiceModule { }
