@@ -5,6 +5,7 @@ import { BreadcrumsComponent } from './breadcrums/breadcrums.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NotfoundComponent } from './notfound/notfound.component';
+import { PipesModule } from '../pipes/pipes.module';
 
 @NgModule({
     declarations: [
@@ -15,7 +16,8 @@ import { NotfoundComponent } from './notfound/notfound.component';
     ],
     imports: [
         CommonModule,
-        RouterModule
+        RouterModule,
+        PipesModule
     ],
     exports: [
         BreadcrumsComponent,

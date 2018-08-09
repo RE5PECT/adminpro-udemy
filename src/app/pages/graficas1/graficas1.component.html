@@ -2,8 +2,42 @@
   <div class="col-6">
     <div class="card">
       <div class="card-body">
-        <app-grafico-dona [chartLabels]="graficos.grafico1.labels" [chartData]="graficos.grafico1.data" [chartType]="graficos.grafico1.type" [leyenda]="graficos.grafico1.leyenda" ></app-grafico-dona>
+        <app-grafico-dona [chartLabels]="graficos.grafico1.labels" [chartData]="graficos.grafico1.data" [chartType]="graficos.grafico1.type"
+          [leyenda]="graficos.grafico1.leyenda"></app-grafico-dona>
       </div>
     </div>
   </div>
+  <div class="col-6">
+    <div class="card">
+      <div class="card-body">
+        <app-grafico-dona [chartLabels]="graficos.grafico2.labels" [chartData]="graficos.grafico2.data" [chartType]="graficos.grafico2.type"
+          [leyenda]="graficos.grafico2.leyenda"></app-grafico-dona>
+      </div>
+    </div>
+  </div>
+  <div class="col-6">
+    <div class="card">
+      <div class="card-body">
+        <app-grafico-dona [chartLabels]="graficos.grafico3.labels" [chartData]="graficos.grafico3.data" [chartType]="graficos.grafico3.type"
+          [leyenda]="graficos.grafico3.leyenda"></app-grafico-dona>
+      </div>
+    </div>
+  </div>
+  <div class="col-6">
+    <div class="card">
+      <div class="card-body">
+        <app-grafico-dona [chartLabels]="graficos.grafico4.labels" [chartData]="graficos.grafico4.data" [chartType]="graficos.grafico4.type"
+          [leyenda]="graficos.grafico4.leyenda"></app-grafico-dona>
+      </div>
+    </div>
+  </div>
+  <div class="col-6" *ngIf="graficos.grafico5">
+    <div class="card">
+      <div class="card-body">
+        <app-grafico-dona [chartLabels]="graficos.grafico5.labels" [chartData]="graficos.grafico5.data" [chartType]="graficos.grafico5.type"
+          [leyenda]="graficos.grafico5.leyenda"></app-grafico-dona>
+      </div>
+    </div>
+  </div>
+
 </div>
