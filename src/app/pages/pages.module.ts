@@ -2,7 +2,6 @@
 import { ProfileComponent } from './profile/profile.component';
 import { PipesModule } from './../pipes/pipes.module';
 import { SharedModule } from './../shared/shared.module';
-import { PagesComponent } from './pages.component';
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -26,8 +25,7 @@ import { BusquedaComponent } from './busqueda/busqueda.component';
 
 
 @NgModule({
-    declarations: [
-        PagesComponent,
+    declarations: [        
         DashboardComponent,
         Graficas1Component,
         ProgressComponent,
@@ -37,8 +35,7 @@ import { BusquedaComponent } from './busqueda/busqueda.component';
         PromesasComponent,
         RxjsComponent,
         ProfileComponent,
-        UsuariosComponent,
-        ModalUploadComponent,
+        UsuariosComponent,        
         HospitalesComponent,
         MedicosComponent,
         MedicoComponent,
@@ -53,7 +50,6 @@ import { BusquedaComponent } from './busqueda/busqueda.component';
         PipesModule 
      ],
     exports: [
-        PagesComponent,
         DashboardComponent,
         Graficas1Component,
         ProgressComponent        

@@ -10,6 +10,7 @@ import { UsuarioService } from './service.index';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginGuardGuard } from './service.index';
 import { UploadService } from './service.index';
+import { VerificaTokenGuard } from './guards/verifica-token.guard';
 
 
 
@@ -29,7 +30,8 @@ import { UploadService } from './service.index';
     UploadService,
     ModalUploadService,
     HospitalService,
-    MedicoService
+    MedicoService,
+    VerificaTokenGuard
   ]
 })
 export class ServiceModule { }

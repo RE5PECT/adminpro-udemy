@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
 import { UsuarioService } from '../../services/service.index';
 import { ModalUploadService } from '../../components/modal-upload/modal-upload.service';
 
-declare var swal: any;
+import swal from 'sweetalert';
 
 @Component({
   selector: 'app-hospitales',
@@ -60,12 +60,12 @@ export class HospitalesComponent implements OnInit {
       title: 'Esta seguro?',
       text: 'Esta a punto de borrar a ' + hospital.nombre,
       icon: 'warning',
-      buttons: true,
+      buttons: ['Cancelar', 'Ok'],
       dangerMode: true
     }).then(borrar => {
       if (borrar) {
         this._hospitalService.borrarHospital(hospital._id).subscribe(
-          (resp: any) => {            
+          (resp: any) => {
             this.cargarHospitales();
             swal('Hospital Borrado', 'El hospital ha sido eliminado correctamente', 'success');
           });
@@ -88,18 +88,23 @@ export class HospitalesComponent implements OnInit {
     swal({
       title: 'Crear hospital',
       text: 'Ingrese el nombre del hospital',
-      content: 'input',
+      content: {
+        element: "input",
+        attributes: {
+          placeholder: "Nombre hospital",
+          type: "input"
+        },
+      },
       icon: 'info',
-      buttons: true,
       dangerMode: true
-    }).then( (valor: string ) => {
+    }).then((valor: string) => {
 
-      if ( !valor || valor.length === 0 ) {
+      if (!valor || valor.length === 0) {
         return;
       }
 
-      this._hospitalService.crearHospital( valor )
-              .subscribe( () => this.cargarHospitales() );
+      this._hospitalService.crearHospital(valor)
+        .subscribe(() => this.cargarHospitales());
 
     });
 

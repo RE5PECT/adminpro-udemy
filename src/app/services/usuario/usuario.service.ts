@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 import { of } from 'rxjs';
 import { Router } from '@angular/router';
 import { UploadService } from '../upload/upload.service';
-
+import swal from 'sweetalert';
 
 @Injectable({
   providedIn: 'root'
@@ -160,6 +160,26 @@ export class UsuarioService {
       this.usuario = null;
       this.menu = {}
     }
+  }
+
+  renuevaToken() {
+    let url = BASE_URL + '/login/refresh?token=' + this.token;
+
+    return this.http.get(url).pipe(
+      map((resp:any) =>{
+        this.token = resp.token;
+        localStorage.setItem('token', this.token);
+        return true;
+      }),
+      catchError(
+        (error: any) => {
+          this._router.navigate(['/login']);
+          swal('No se pudo renovar token','No fue posible renovar token', 'error');
+          throw error;
+        }
+      )
+    );
+
   }
 
 }

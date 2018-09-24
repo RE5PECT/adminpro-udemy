@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BASE_URL } from '../config';
 import { UsuarioService } from '../usuario/usuario.service';
+import swal from 'sweetalert';
 
 @Injectable({
   providedIn: 'root'

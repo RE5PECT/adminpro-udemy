@@ -6,13 +6,15 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { PipesModule } from '../pipes/pipes.module';
+import { ModalUploadComponent } from '../components/modal-upload/modal-upload.component';
 
 @NgModule({
     declarations: [
         BreadcrumsComponent,
         HeaderComponent,
         NotfoundComponent,
-        SidebarComponent
+        SidebarComponent,
+        ModalUploadComponent
     ],
     imports: [
         CommonModule,
@@ -23,7 +25,8 @@ import { PipesModule } from '../pipes/pipes.module';
         BreadcrumsComponent,
         HeaderComponent,
         NotfoundComponent,
-        SidebarComponent
+        SidebarComponent,
+        ModalUploadComponent
     ],
     providers: [],
 })
